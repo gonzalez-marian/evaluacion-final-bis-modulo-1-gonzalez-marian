@@ -1,24 +1,19 @@
-* {
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Rubik', sans-serif;
-    border: 1px solid #fabada;
-}
 .page {
-    width: 100%;
-    height: 100vh;
+    box-sizing: border-box;
+    font-size: $font_general;
+    font-family: $text_general;
 }
 .page__header {
-    width: 100%;
     height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #c5c5c5;
+    border: 1px solid $border_header;
+    background-color: $color_general;
 }
 .image__header {
-    width: 100%;
     max-width: 154px;
+    margin-top: 10px;
 }
 .links__header>ul>li {
     display: inline;
@@ -27,15 +22,14 @@
 .links__header>ul>li>a {
     display: inline-block;
     font-size: $font_general;
-    color: #4a4a4a;
+    color: $color_links;
     height: 19px;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 10px;
 }
 /*********** termina header ***********/
 .page__main {
-    border: 1px solid red;
-    width: 100%;
     height: 366px;
     background: url(../images/david-van.jpg);
     background-position: center;
@@ -52,21 +46,45 @@
     .text__main {
     font-weight: bold;
     font-size: 1.875rem;
-    color: #ffffff;
+    color: $color_general;
+    margin-left: 20px;
     }
 }
 .page__footer {
-    border: 1px solid olive;
-    width: 100%;
     height: 90px;
-    background-color: #252525;
+    background-color: $color_footer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 .text__footer {
-    height: 19px;
-    font-size: 16px;
-    color: #676a6d;
+    font-size: $font_general;
+    color: $color_text-footer;
+    text-align: center;
+}
+
+/******************** *****************/
+@media all and (min-width:768px){
+    .page__header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .image__header {
+        margin-left: 20px;
+    }
+    .page__main {
+        height: 834px;
+    }
+    .title__main{
+        .text__main {
+        font-size: 3.75rem;
+        }
+    }
+}
+
+@media all and (min-width:1024px){
+    .links__header {
+        margin-right: 20px;
+    }
 }
