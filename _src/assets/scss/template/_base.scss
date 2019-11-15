@@ -5,7 +5,7 @@
 }
 .page__header {
     width: 100%;
-    height: 120px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@
 
 /*********** termina header ***********/
 .page__main {
-    height: 366px;
+    height: 100vh;
     background: url(../images/david-van.jpg);
     background-position: center;
     background-size: cover;
@@ -58,6 +58,7 @@
     margin-left: 20px;
     }
 }
+
 .page__footer {
     width: 100%;
     height: 90px;
@@ -66,13 +67,26 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+
 }
 .text__footer {
     font-size: $font_general;
     color: $color_text-footer;
     text-align: center;
+}
+.page__warning {
+    width: 100%;
+    height: 100px;
+    background:green;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text__warning {
+    font-size: 16px;
+    color: white;
 }
 
 /******************** *****************/
@@ -89,12 +103,24 @@
         margin-right: 20px;
     }
     .page__main {
-        height: 834px;
+        height: 100vh;
     }
     .title__main{
         .text__main {
         font-size: 3.75rem;
         }
+    }
+    .page__add {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .page__warning {
+        background: white;
+        color: green;
+    }
+    .text__warning {
+        color: green;
     }
 
 }
